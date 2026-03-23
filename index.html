@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handsome - كراء بدلات العرس الراقية</title>
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --gray-dark: #333333;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--black);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--black);
+            color: var(--white);
+            border-bottom: 2px solid var(--white);
+            padding: 10px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-container {
+            width: 150px; /* يمكنك تعديل هذا الحجم حسب الحاجة */
+            margin-bottom: 10px;
+        }
+
+        .logo-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav {
+            margin-top: 5px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: 0.3s;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--black);
+            
+            /* --- [ مكان إضافة الخلفية الخاصة بك ] --- */
+            /* استبدل الرابط أدناه برابط صورتك المفضلة (على سبيل المثال، صورة قماش أو نسيج راقي) */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1594932224827-c4670ad52c20?auto=format&fit=crop&q=80&w=1480') center/cover no-repeat;
+            /* ------------------------------------- */
+        }
+
+        /* تم إزالة النص من داخل الـ Hero بناءً على الطلب */
+
+        /* Sections Styling */
+        .section-title {
+            text-align: center;
+            padding: 50px 0 20px;
+            color: var(--black);
+            font-size: 2rem;
+            border-bottom: 2px solid var(--black);
+            max-width: 250px;
+            margin: 0 auto 40px;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px 5%;
+        }
+
+        .product-card {
+            background-color: var(--white);
+            border: 1px solid var(--gray-light);
+            border-radius: 4px; /* زوايا أكثر حدة لمظهر كلاسيكي */
+            overflow: hidden;
+            transition: box-shadow 0.3s, transform 0.2s;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            border-color: var(--black);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 350px;
+            background-color: var(--gray-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            background-size: cover;
+            background-position: center;
+            /* استخدم الرابط المؤقت كخلفية افتراضية؛ استبدله بصورك الحقيقية لاحقًا */
+            background-image: url('https://via.placeholder.com/300x400/f0f0f0/333333?text=Handsome+Suit');
+        }
+
+        .product-info {
+            padding: 20px;
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .product-name {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--black);
+            font-weight: 600;
+        }
+
+        .product-details {
+            font-size: 0.95rem;
+            color: var(--gray-dark);
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            color: var(--black);
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 50px;
+            border-top: 1px solid var(--white);
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="https://via.placeholder.com/150x50/ffffff/000000?text=HANDSOME" alt="Handsome Logo" class="logo-img">
+        </div>
+    <nav>
+        <a href="#adults">بدلات الرجال</a>
+        <a href="#kids">قسم الأطفال</a>
+        <a href="#accessories">أحذية وساعات</a>
+    </nav>
+</header>
+
+<div class="hero">
+    </div>
+
+<h2 id="adults" class="section-title">بدلات الرجال</h2>
+<div class="products-grid">
+    <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-info">
+            <div class="product-name">بدلة "رويال" كلاسيك</div>
+            <div class="product-details">اللون: أسود ملكي | النوع: Slim Fit</div>
+            <div class="price">15,000 د.ج</div>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-info">
+            <div class="product-name">بدلة "سموكي" إيطالية</div>
+            <div class="product-details">اللون: كحلي غامق | القماش: صوف صيفي</div>
+            <div class="price">18,000 د.ج</div>
+        </div>
+    </div>
+    </div>
+
+<h2 id="kids" class="section-title">قسم الأطفال</h2>
+<div class="products-grid">
+    <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-info">
+            <div class="product-name">طقم "الأمير الصغير"</div>
+            <div class="product-details">اللون: أبيض ورمادي</div>
+            <div class="price">5,000 د.ج</div>
+        </div>
+    </div>
+</div>
+
+<h2 id="accessories" class="section-title">أحذية وساعات</h2>
+<div class="products-grid">
+    <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-info">
+            <div class="product-name">حذاء جلد طبيعي</div>
+            <div class="product-details">صناعة يدوية - أسود لامع</div>
+            <div class="price">7,000 د.ج</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 HANDSOME LOCATION COSTUME. جميع الحقوق محفوظة.</p>
+    <p>تواصل معنا: 0555-XX-XX-XX</p>
+</footer>
+
+</body>
+</html>
