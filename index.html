@@ -1,233 +1,261 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handsome - كراء بدلات العرس الراقية</title>
-    <style>
-        :root {
-            --black: #000000;
-            --white: #ffffff;
-            --gray-light: #f5f5f5;
-            --gray-dark: #333333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            background-color: var(--white);
-            color: var(--black);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+<title>Handsome</title>
 
-        /* Header & Navigation */
-        header {
-            background-color: var(--black);
-            color: var(--white);
-            border-bottom: 2px solid var(--white);
-            padding: 10px 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;900&display=swap" rel="stylesheet">
 
-        .logo-container {
-            width: 150px; /* يمكنك تعديل هذا الحجم حسب الحاجة */
-            margin-bottom: 10px;
-        }
+<style>
 
-        .logo-img {
-            max-width: 100%;
-            height: auto;
-        }
+body{
+    margin:0;
+    font-family:'Cairo',sans-serif;
+    background:black;
+    color:white;
+}
 
-        nav {
-            margin-top: 5px;
-        }
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:#000;
+    border-bottom:1px solid white;
+}
 
-        nav a {
-            color: var(--white);
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 500;
-            transition: 0.3s;
-            font-size: 1.1rem;
-        }
+/* LOGO */
+.logo img{
+    height:50px;
+}
 
-        nav a:hover {
-            opacity: 0.7;
-        }
+/* LINKS */
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:600;
+}
 
-        /* Hero Section */
-        .hero {
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 1px solid var(--black);
-            
-            /* --- [ مكان إضافة الخلفية الخاصة بك ] --- */
-            /* استبدل الرابط أدناه برابط صورتك المفضلة (على سبيل المثال، صورة قماش أو نسيج راقي) */
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('IMG_0439.jpeg') center/cover no-repeat;
-            /* ------------------------------------- */
-        }
+nav a:hover{
+    opacity:0.7;
+}
 
-        /* تم إزالة النص من داخل الـ Hero بناءً على الطلب */
+/* HERO */
+.hero{
+    height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
 
-        /* Sections Styling */
-        .section-title {
-            text-align: center;
-            padding: 50px 0 20px;
-            color: var(--black);
-            font-size: 2rem;
-            border-bottom: 2px solid var(--black);
-            max-width: 250px;
-            margin: 0 auto 40px;
-        }
+    /* هنا حط صورتك */
+    background:url("background.jpg") center/cover no-repeat;
+}
 
-        /* Products Grid */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            padding: 20px 5%;
-        }
+.hero h1{
+    font-size:45px;
+}
 
-        .product-card {
-            background-color: var(--white);
-            border: 1px solid var(--gray-light);
-            border-radius: 4px; /* زوايا أكثر حدة لمظهر كلاسيكي */
-            overflow: hidden;
-            transition: box-shadow 0.3s, transform 0.2s;
-            text-align: center;
-        }
+/* VIDEO */
+.video-section{
+    padding:40px;
+    text-align:center;
+}
 
-        .product-card:hover {
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-            transform: translateY(-5px);
-            border-color: var(--black);
-        }
+.video-section video{
+    width:90%;
+    max-width:800px;
+    border-radius:10px;
+}
 
-        .product-image {
-            width: 100%;
-            height: 350px;
-            background-color: var(--gray-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            background-size: cover;
-            background-position: center;
-            /* استخدم الرابط المؤقت كخلفية افتراضية؛ استبدله بصورك الحقيقية لاحقًا */
-            background-image: url('IMG_0439.jpeg');
-        }
+/* SECTIONS */
+.section{
+    padding:50px 20px;
+}
 
-        .product-info {
-            padding: 20px;
-            border-top: 1px solid var(--gray-light);
-        }
+.section h2{
+    text-align:center;
+    margin-bottom:30px;
+}
 
-        .product-name {
-            font-size: 1.3rem;
-            margin-bottom: 8px;
-            color: var(--black);
-            font-weight: 600;
-        }
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
 
-        .product-details {
-            font-size: 0.95rem;
-            color: var(--gray-dark);
-            margin-bottom: 12px;
-        }
+/* CARD */
+.card{
+    background:#111;
+    border:1px solid white;
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.3s;
+}
 
-        .price {
-            font-size: 1.4rem;
-            color: var(--black);
-            font-weight: bold;
-        }
+/* ZOOM EFFECT */
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:0.4s;
+}
 
-        footer {
-            background-color: var(--black);
-            color: var(--white);
-            padding: 30px 20px;
-            text-align: center;
-            margin-top: 50px;
-            border-top: 1px solid var(--white);
-        }
+.card:hover img{
+    transform:scale(1.1);
+}
 
-        footer p {
-            margin: 5px 0;
-            font-size: 0.9rem;
-        }
-    </style>
+.info{
+    padding:10px;
+}
+
+.name{
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid white;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .hero h1{
+        font-size:28px;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
-<header>
-    <div class="logo-container">
-        <img src="IMG_0439.jpeg" class="logo-img">
-        </div>
-    <nav>
-        <a href="#adults">بدلات الرجال</a>
-        <a href="#kids">قسم الأطفال</a>
-        <a href="#accessories">أحذية وساعات</a>
-    </nav>
-</header>
+<!-- NAVBAR -->
+<nav>
 
-<div class="hero">
-    </div>
-
-<h2 id="adults" class="section-title">بدلات الرجال</h2>
-<div class="products-grid">
-    <div class="product-card">
-        <div class="product-image"></div>
-        <div class="product-info">
-            <div class="product-name">بدلة "رويال" كلاسيك</div>
-            <div class="product-details">اللون: أسود ملكي | النوع: Slim Fit</div>
-            <div class="price">15,000 د.ج</div>
-        </div>
-    </div>
-    <div class="product-card">
-        <div class="product-image"></div>
-        <div class="product-info">
-            <div class="product-name">بدلة "سموكي" إيطالية</div>
-            <div class="product-details">اللون: كحلي غامق | القماش: صوف صيفي</div>
-            <div class="price">18,000 د.ج</div>
-        </div>
-    </div>
-    </div>
-
-<h2 id="kids" class="section-title">قسم الأطفال</h2>
-<div class="products-grid">
-    <div class="product-card">
-        <div class="product-image"></div>
-        <div class="product-info">
-            <div class="product-name">طقم "الأمير الصغير"</div>
-            <div class="product-details">اللون: أبيض ورمادي</div>
-            <div class="price">5,000 د.ج</div>
-        </div>
-    </div>
+<!-- ضع اللوجو هنا -->
+<div class="logo">
+<img src="logo.png">
 </div>
 
-<h2 id="accessories" class="section-title">أحذية وساعات</h2>
-<div class="products-grid">
-    <div class="product-card">
-        <div class="product-image"></div>
-        <div class="product-info">
-            <div class="product-name">حذاء جلد طبيعي</div>
-            <div class="product-details">صناعة يدوية - أسود لامع</div>
-            <div class="price">7,000 د.ج</div>
-        </div>
-    </div>
+<div>
+<a href="#home">الرئيسية</a>
+<a href="#men">رجال</a>
+<a href="#kids">أطفال</a>
+<a href="#acc">أحذية وساعات</a>
 </div>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<h1>Handsome Location Costume</h1>
+<p>أناقة بلا حدود</p>
+</section>
+
+<!-- VIDEO -->
+<section class="video-section">
+<h2>فيديو المحل</h2>
+
+<!-- ضع الفيديو هنا -->
+<video controls>
+<source src="shop.mp4" type="video/mp4">
+</video>
+
+</section>
+
+<!-- MEN -->
+<section class="section" id="men">
+<h2>بدلات الرجال</h2>
+
+<div class="grid">
+
+<!-- كررها حتى 20+ -->
+<div class="card">
+<img src="model1.jpg">
+<div class="info">
+<div class="name">اسم الموديل</div>
+<div>اللون: ----</div>
+<div>السعر: ----</div>
+</div>
+</div>
+
+<div class="card">
+<img src="model2.jpg">
+<div class="info">
+<div class="name">اسم الموديل</div>
+<div>اللون: ----</div>
+<div>السعر: ----</div>
+</div>
+</div>
+
+<div class="card">
+<img src="model3.jpg">
+<div class="info">
+<div class="name">اسم الموديل</div>
+<div>اللون: ----</div>
+<div>السعر: ----</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- KIDS -->
+<section class="section" id="kids">
+<h2>بدلات الأطفال</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="kid1.jpg">
+<div class="info">
+<div class="name">موديل طفل</div>
+<div>اللون: ----</div>
+<div>السعر: ----</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ACCESSORIES -->
+<section class="section" id="acc">
+<h2>الأحذية والساعات</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="shoe1.jpg">
+<div class="info">
+<div class="name">حذاء</div>
+<div>اللون: ----</div>
+<div>السعر: ----</div>
+</div>
+</div>
+
+<div class="card">
+<img src="watch1.jpg">
+<div class="info">
+<div class="name">ساعة</div>
+<div>اللون: ----</div>
+<div>السعر: ----</div>
+</div>
+</div>
+
+</div>
+</section>
 
 <footer>
-    <p>&copy; 2026 HANDSOME LOCATION COSTUME. جميع الحقوق محفوظة.</p>
-    <p>تواصل معنا: 0555-XX-XX-XX</p>
+© Handsome 2026
 </footer>
 
 </body>
